@@ -1,0 +1,54 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Customers Content Area</h1>
+
+  <div class="oj-flex">
+    <div class="oj-flex-item oj-sm-flex-direction-column oj-panel oj-flex oj-margin oj-panel-alt1">
+      <div class="oj-flex-item oj-panel oj-margin oj-panel-alt4">
+       
+      </div>
+      <div class="oj-flex-item oj-panel oj-margin oj-panel-alt5">
+        
+      </div>
+    </div>
+    <div class="oj-flex-item oj-panel oj-margin oj-panel-alt2">
+     
+    </div>
+    <div class="oj-flex-item oj-panel oj-margin oj-panel-alt3">
+     
+    </div>
+  </div>
+  <div id="div1">
+        
+    <oj-label for="text-input">customer name</oj-label>
+    <oj-input-text id="text-input" value="{{value}}"></oj-input-text>
+  
+    <br/><br/>
+  
+    <span class="oj-label">Current customer name is: </span>
+    <span data-bind="text: value"></span>
+ 
+  </div>
+  <div id="div1">
+        
+    <oj-label for="password">customer password </oj-label>
+    <br/>
+    <oj-input-password id="password" value="{{password}}">
+    </oj-input-password>
+  
+    <br/><br/>
+  
+    <span class="oj-label">Customer pass is]: </span>
+    <span data-bind="text: password"></span>
+  </div>
+  <div id="formId">
+    <oj-label class="oj-label" for="switch">switch component</oj-label>
+    <oj-switch id="switch" value="{{isChecked}}"></oj-switch><br/><br/>
+    <span> switch is <oj-bind-text value="[[ isChecked() ? 'ON' : 'OFF']]"></oj-bind-text></span>
+    
+    </div>
+
+</div>

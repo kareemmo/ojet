@@ -1,0 +1,74 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Dashboard Content Area</h1>
+ 
+  <div>
+
+      <oj-tree-view id="treeview" 
+      data-oj-binding-provider="none" 
+      aria-label="Tree View with Static HTML">
+<!--
+NOTE: The closing brackets of the item icon spans are intentionally
+broken so that there is no whitespace between the icon and the text.
+-->
+<ul>
+<li id="news">
+<span class="oj-treeview-item-icon"></span
+><span class="oj-treeview-item-text">News</span>
+</li>
+<li id="blogs">
+<span class="oj-treeview-item-icon"></span
+><span class="oj-treeview-item-text">Blogs</span>
+<ul>
+<li id="today">
+  <span class="oj-treeview-item-icon"></span
+  ><span class="oj-treeview-item-text">Today</span>
+</li>
+<li id="yesterday">
+  <span class="oj-treeview-item-icon"></span
+  ><span class="oj-treeview-item-text">Yesterday</span>
+</li>
+<li id="archive">
+  <span class="oj-treeview-item-icon"></span
+  ><span class="oj-treeview-item-text">Archive</span>
+</li>
+</ul>
+</li>
+</ul>
+</oj-tree-view>
+  </div>
+  <div id="moduleDemo">
+    <oj-buttonset-one class="oj-buttonset-width-auto" value="{{currentModule}}">
+      <oj-option id="sv1" value="first">View One</oj-option>
+      <oj-option id="sv2" value="second">View Two</oj-option>
+      <oj-option id="sv3" value="third">View Three</oj-option>
+      <oj-option id="sv4" value="oj:blank">Empty View</oj-option>
+    </oj-buttonset-one>
+    <p>
+      The inserted module is below
+      </p>
+      
+      <div data-bind="ojModule: modulePath" style="background-color:aliceblue">
+      </div>
+
+
+</div>
+<div id="train-container" >
+  <oj-train id="train"
+            class="oj-train-stretch"
+            style="max-width:700px;margin-left:auto;margin-right:auto;"
+            on-selected-step-changed="[[updateLabelText]]"
+            selected-step="{{selectedStepValue}}"
+            steps="[[stepArray]]">
+  </oj-train>
+  <br/>
+  <h3 id="currentStepText"
+          data-bind="text: 'You are on ' + selectedStepLabel()"
+          style="text-align: center">
+  </h3>
+  <br/>
+</div>
+</div>

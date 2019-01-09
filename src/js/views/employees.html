@@ -1,0 +1,49 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+ <div class="oj-hybrid-padding">
+    <h1>Employees Content Area</h1>
+    <oj-picto-chart id='pictochart1' 
+    items="[[pictoChartItems]]"
+    animation-on-display="auto"
+    column-count="5"
+    style="vertical-align:middle; margin-right:15px">
+  </oj-picto-chart>
+  <div style="display:inline-block; vertical-align:middle; font-weight:bold">
+        <span style="color:#333333; font-size:1.1em">7 out of 10 college students</span><br>
+        <span style="color:#ed6647; font-size:1.3em">have sleep problems.</span>
+      </div>
+      <div>
+          <h2>Your Html knowledge</h2>
+      <oj-status-meter-gauge 
+      id="gauge9"
+      min="0" 
+      max="100" 
+      value="{{value9}}"  
+      orientation="circular"
+      metric-label.rendered="off"
+      label="[[label]]"
+      style="margin-top:20px; height:100px; width:80px;"
+      class="circular-status-meter-common circular-status-meter-large">
+    </oj-status-meter-gauge>
+</div>
+<div>
+        <h2>Your JavaScript knowledge</h2>
+        <oj-status-meter-gauge 
+        id="gauge6" 
+        tooltip.renderer="[[getTooltip]]" 
+        min="0" 
+        max="100" 
+        thresholds="[[thresholdValues]]"
+        value="{{value6}}"
+        metric-label.rendered="on"
+        plot-area.rendered="on"
+        indicator-size="0.5" 
+        threshold-display="all"
+        class="horizontal-status-meter-sample">
+      </oj-status-meter-gauge >
+</div>
+
+  </div>
+  

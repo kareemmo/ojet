@@ -1,0 +1,23 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+
+<div class="oj-hybrid-padding">
+        
+                <oj-label for="basicSelect">Select chart type</oj-label>
+                <oj-select-one id="basicSelect" value="{{val}}" style="max-width:20em">
+                  <oj-option value="bar">bar</oj-option>
+                  <oj-option value="pie">pie</oj-option>
+                 
+                </oj-select-one>
+              
+    <oj-chart type="[[val]]" series=[[datasource]]>
+
+    </oj-chart>
+
+ 
+  <div>
+      To change the content of this section, you will make edits to the incidents.html file located in the /js/views folder.
+  </div>
+</div>
